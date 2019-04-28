@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  display: flex;
 }
 
 .App-logo {
@@ -21,6 +22,14 @@
 
 .App-link {
   color: #61dafb;
+}
+.navBar {
+  justify-content: space-between;
+  padding: 10px;
+}
+.backgroundImg {
+  /* display: float; */
+  width: 1000px;
 }
 
 @keyframes App-logo-spin {
