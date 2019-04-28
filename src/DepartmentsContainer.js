@@ -6,7 +6,9 @@ class DepartmentsContainer extends Component {
     console.log(this.props.departments);
     return (
       <div>
+        <h1> Departments </h1>
         {this.props.departments.map(department => <h1>{department.name}</h1>)}
+
       </div>
     );
   }
