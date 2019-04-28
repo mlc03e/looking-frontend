@@ -28,8 +28,8 @@
   padding: 10px;
 }
 .backgroundImg {
-  /* display: float; */
-  width: 1000px;
+  position: absolute;
+  width: 100%;
 }
 
 @keyframes App-logo-spin {
