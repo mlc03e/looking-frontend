@@ -32,6 +32,30 @@
   background-color: grey;
   padding-bottom: 20px;
 }
+.navBar h1:hover {
+  color: white;
+
+}
+.women {
+  display: flex;
+  flex-direction: column;
+}
+.navBar ul {
+  width: 40%;
+  align-items: center;
+  list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  z-index: 1;
+  justify-content: center;
+  margin-left:25%;
+  border-color: black;
+  /* border-style: solid; */
+  border-bottom: solid;
+  border-left: solid;
+  border-right: solid;
+  padding-bottom: 20px;
+}
 .backgroundImg {
   position: absolute;
   width: 100%;
