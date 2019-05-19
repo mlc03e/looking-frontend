@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import DepartmentsContainer from './DepartmentsContainer'
 
 class Navbar extends Component {
   state= {
@@ -17,7 +18,7 @@ womenMouseLeave=()=> {
         <h1> Home </h1>
         <div className='women'>
           <h1 onMouseEnter= {this.womenMouseOver} onMouseLeave= {this.womenMouseLeave}> Womens </h1>
-          {this.state.showWomen && <ul><li>Shirts </li><li>Pants </li></ul>}
+          {this.state.showWomen && <DepartmentsContainer categories={this.props.departments.map(d => d.categories)}/>}
         </div>
         <h1> Mens </h1>
         <h1> Accessories </h1>
