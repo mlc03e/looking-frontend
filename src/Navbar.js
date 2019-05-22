@@ -30,9 +30,16 @@ accessoiesMouseOver= ()=> {
   }
 }
 categoriesMouseLeave=()=> {
-  this.setState({showWomen: false})
-  this.setState({showMen: false})
-  this.setState({showAccessories: false})
+  setTimeout(()=>{
+    this.setState({showWomen: false})
+  }, 2000)
+  setTimeout(()=>{
+    this.setState({showMen: false})
+  }, 2000)
+  setTimeout(()=>{
+    this.setState({showAccessories: false})
+  }, 2000)
+
 }
   render() {
     const categories= this.props.departments.map(d => d.categories)
