@@ -3,7 +3,7 @@ import React, { Component } from 'react';
 class DepartmentsContainer extends Component {
 
   render() {
-    // console.log(this.props.categories[0].map(c => c.name));
+    console.log(this.props.categories);
 
     return (
       <div>

@@ -61,8 +61,10 @@
   padding-bottom: 20px;
 }
 .backgroundImg {
-  position: absolute;
+  /* position: absolute; */
+  margin-top: 150px;
   width: 100%;
+  z-index: -1
 }
 
 @keyframes App-logo-spin {
