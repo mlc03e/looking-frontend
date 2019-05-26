@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import DepartmentsContainer from './DepartmentsContainer'
+// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 
 class Navbar extends Component {
   state= {
@@ -32,19 +33,20 @@ accessoiesMouseOver= ()=> {
 categoriesMouseLeave=()=> {
   setTimeout(()=>{
     this.setState({showWomen: false})
-  }, 2000)
+  }, 2300)
   setTimeout(()=>{
     this.setState({showMen: false})
-  }, 2000)
+  }, 2300)
   setTimeout(()=>{
     this.setState({showAccessories: false})
-  }, 2000)
+  }, 2300)
 
 }
   render() {
     const categories= this.props.departments.map(d => d.categories)
     console.log(this.props.departments);
     return (
+
       <div className= 'navBar'>
         <h1> Home </h1>
         <div className='women'>
@@ -60,6 +62,7 @@ categoriesMouseLeave=()=> {
           {this.state.showAccessories && <DepartmentsContainer categories={categories[2]}/>}
         </div>
       </div>
+
     );
   }
 
