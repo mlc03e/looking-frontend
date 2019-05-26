@@ -8,12 +8,12 @@ class DepartmentsContainer extends Component {
 
   }
   render() {
-    console.log(this.props.categories);
+    console.log(this.props.departments);
 
     return (
       <div>
         <ul>
-          {this.props.categories.map(c =>  <Link to= {`/${c.name}`}>{`${c.name}`}</Link>)}
+          {this.props.categories.map(c =>  <Link to= {`/${this.props.departments.name}/${c.name}`}>{`${c.name}`}</Link>)}
         </ul>
 
       </div>
@@ -21,5 +21,5 @@ class DepartmentsContainer extends Component {
   }
 
 }
-
+// <Link to= {`/${this.props.categories}/${names}`}>{`${names}`}</Link>
 export default DepartmentsContainer;

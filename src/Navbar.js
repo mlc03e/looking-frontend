@@ -51,15 +51,15 @@ categoriesMouseLeave=()=> {
         <h1> Home </h1>
         <div className='women'>
           <h1 onMouseEnter= {this.womenMouseOver} onMouseLeave= {this.categoriesMouseLeave}> Womens </h1>
-          {this.state.showWomen && <DepartmentsContainer categories={categories[0]}/>}
+          {this.state.showWomen && <DepartmentsContainer departments={this.props.departments[0]} categories={categories[0]}/>}
         </div>
         <div className='men'>
           <h1 onMouseEnter= {this.menMouseOver} onMouseLeave= {this.categoriesMouseLeave}> Mens </h1>
-          {this.state.showMen && <DepartmentsContainer categories={categories[1]}/>}
+          {this.state.showMen && <DepartmentsContainer departments={this.props.departments[1]} categories={categories[1]}/>}
         </div>
         <div className= 'accessoies'>
           <h1 onMouseEnter= {this.accessoiesMouseOver} onMouseLeave= {this.categoriesMouseLeave}> Accessories </h1>
-          {this.state.showAccessories && <DepartmentsContainer categories={categories[2]}/>}
+          {this.state.showAccessories && <DepartmentsContainer departments={this.props.departments[2]} categories={categories[2]}/>}
         </div>
       </div>
 
