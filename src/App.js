@@ -3,7 +3,9 @@ import logo from './logo.svg';
 import './App.css';
 import Navbar from './Navbar'
 import DepartmentsContainer from './DepartmentsContainer'
-import BackgroundImgs from './BackgroundImgs'
+
+import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
+import Department from './Department'
 
 class App extends Component {
   state= {
@@ -14,12 +16,17 @@ class App extends Component {
     .then(response => response.json())
     .then(departments => this.setState({departments}))
   }
+
   render() {
+    const departmentNames = this.state.departments.map(d => d.name)
+    console.log(departmentNames);
     return (
       <div className="App">
-        <Navbar departments={this.state.departments}/>
-        
-        <BackgroundImgs />
+        <>
+          <Route path="/" component={()=><Navbar departments={this.state.departments}/>}/>
+          <Route path="/Women's" exact component={Department}/>
+
+        </>
       </div>
     );
   }

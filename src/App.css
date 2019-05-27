@@ -31,18 +31,21 @@
   grid-gap: 10px;
   background-color: grey;
   padding-bottom: 20px;
+  padding-top: 15px;
 }
-.navBar h1:hover {
-  color: white;
+.navBar a:hover {
+  color: red;
 
 }
 .women {
   display: flex;
   flex-direction: column;
+  /* margin-top: 15px; */
 }
 .men {
   display: flex;
   flex-direction: column;
+  /* margin-top: 15px; */
 }
 .navBar ul {
   width: 40%;

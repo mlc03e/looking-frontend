@@ -13,7 +13,7 @@ class DepartmentsContainer extends Component {
     return (
       <div>
         <ul>
-          {this.props.categories.map(c =>  <Link to= {`/${this.props.departments.name}/${c.name}`}>{`${c.name}`}</Link>)}
+          {this.props.categories.map(c =>  <Link to= {`/${this.props.departments.name}/${c.name}`} style={{fontSize: "30px", textDecoration: "none"}}>{`${c.name}`}</Link>)}
         </ul>
 
       </div>

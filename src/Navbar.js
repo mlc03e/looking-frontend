@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import DepartmentsContainer from './DepartmentsContainer'
-// import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
+import BackgroundImgs from './BackgroundImgs'
 
 class Navbar extends Component {
   state= {
@@ -48,18 +49,19 @@ categoriesMouseLeave=()=> {
     return (
 
       <div className= 'navBar'>
-        <h1> Home </h1>
+        <Link to= '/' style={{fontSize: "50px", color: "#000000", textDecoration: 'none' }}> Home </Link>
         <div className='women'>
-          <h1 onMouseEnter= {this.womenMouseOver} onMouseLeave= {this.categoriesMouseLeave}> Womens </h1>
+          <Link to= "/Women's" style={{fontSize: "50px", color: "#000000", textDecoration: 'none' }} onMouseEnter= {this.womenMouseOver} onMouseLeave= {this.categoriesMouseLeave}> Womens </Link>
           {this.state.showWomen && <DepartmentsContainer departments={this.props.departments[0]} categories={categories[0]}/>}
         </div>
         <div className='men'>
-          <h1 onMouseEnter= {this.menMouseOver} onMouseLeave= {this.categoriesMouseLeave}> Mens </h1>
+          <Link to= "/Men's" style={{fontSize: "50px", color: "#000000", textDecoration: 'none' }} onMouseEnter= {this.menMouseOver} onMouseLeave= {this.categoriesMouseLeave}> Mens </Link>
           {this.state.showMen && <DepartmentsContainer departments={this.props.departments[1]} categories={categories[1]}/>}
         </div>
         <div className= 'accessoies'>
-          <h1 onMouseEnter= {this.accessoiesMouseOver} onMouseLeave= {this.categoriesMouseLeave}> Accessories </h1>
+          <Link to= "/Accessories" style={{fontSize: "50px", color: "#000000", textDecoration: 'none' }} onMouseEnter= {this.accessoiesMouseOver} onMouseLeave= {this.categoriesMouseLeave}> Accessories </Link>
           {this.state.showAccessories && <DepartmentsContainer departments={this.props.departments[2]} categories={categories[2]}/>}
+          <BackgroundImgs />
         </div>
       </div>
 
