@@ -7,7 +7,8 @@ class Navbar extends Component {
   state= {
     showWomen: false,
     showMen: false,
-    showAccessories: false
+    showAccessories: false,
+
   }
 
 womenMouseOver=()=> {
@@ -61,7 +62,7 @@ categoriesMouseLeave=()=> {
         <div className= 'accessoies'>
           <Link to= "/Accessories" style={{fontSize: "50px", color: "#000000", textDecoration: 'none' }} onMouseEnter= {this.accessoiesMouseOver} onMouseLeave= {this.categoriesMouseLeave}> Accessories </Link>
           {this.state.showAccessories && <DepartmentsContainer departments={this.props.departments[2]} categories={categories[2]}/>}
-          <BackgroundImgs />
+          
         </div>
       </div>
 
