@@ -6,6 +6,7 @@ import DepartmentsContainer from './DepartmentsContainer'
 import BackgroundImgs from './BackgroundImgs'
 import { BrowserRouter as Router, Route, Link, Redirect } from "react-router-dom";
 import Womens from './Womens'
+import Mens from './Mens'
 
 class App extends Component {
   state= {
@@ -25,6 +26,7 @@ class App extends Component {
         <>
           <Route path="/" component={()=><Navbar departments={this.state.departments}/>}/>
           <Route path="/Women's" exact component={()=><Womens categories={this.state.departments[0]}/>}/>
+          <Route path="/Men's" exact component={()=><Womens categories={this.state.departments[1]}/>}/>
           <Route path="/Home" exact component={BackgroundImgs}/>
         </>
       </div>
