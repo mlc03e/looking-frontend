@@ -5,8 +5,8 @@ class Womens extends Component {
   render() {
     console.log(this.props.categories.id);
     return (
-      <div>
-        {this.props.categories.categories.map(c =><div> {c.name} </div>)} 
+      <div className= "categories">
+        {this.props.categories.categories.map(c =><div className= "categorieBox"> {c.name} </div>)}
       </div>
     );
   }

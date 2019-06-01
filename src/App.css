@@ -69,7 +69,16 @@
   width: 100%;
   z-index: -1
 }
-
+.categories {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-template-rows: auto auto auto;
+  grid-gap: 15px;
+}
+.categorieBox {
+  border-style: solid;
+  border-color: black;
+}
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);
